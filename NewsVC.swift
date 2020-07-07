@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewsVC.swift
 //  NewsFeed
 //
 //  Created by Yaz Burrell on 7/7/20.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+private let reuseIdentifier = "Cell"
+
+class NewsVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        print("hello")
+    
     }
 
 
 }
-

@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9191F13424B5021300479020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191F13324B5021300479020 /* AppDelegate.swift */; };
 		9191F13624B5021300479020 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191F13524B5021300479020 /* SceneDelegate.swift */; };
-		9191F13824B5021300479020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191F13724B5021300479020 /* ViewController.swift */; };
 		9191F13B24B5021300479020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9191F13924B5021300479020 /* Main.storyboard */; };
 		9191F13D24B5021600479020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9191F13C24B5021600479020 /* Assets.xcassets */; };
 		9191F14024B5021600479020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9191F13E24B5021600479020 /* LaunchScreen.storyboard */; };
+		9191F14A24B5162100479020 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191F14924B5162100479020 /* NewsVC.swift */; };
 		DF937544EAA105B6F4891EFE /* Pods_NewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0ADDCD62DDD8BC0D1B255E /* Pods_NewsFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +23,11 @@
 		9191F13024B5021300479020 /* NewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9191F13324B5021300479020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9191F13524B5021300479020 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9191F13724B5021300479020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9191F13A24B5021300479020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9191F13C24B5021600479020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9191F13F24B5021600479020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9191F14124B5021600479020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9191F14924B5162100479020 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,6 @@
 				8BBB5799A06D640F562731EB /* Pods-NewsFeed.debug.xcconfig */,
 				22BD1606EA284A568E39626B /* Pods-NewsFeed.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,9 +80,9 @@
 		9191F13224B5021300479020 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				9191F14924B5162100479020 /* NewsVC.swift */,
 				9191F13324B5021300479020 /* AppDelegate.swift */,
 				9191F13524B5021300479020 /* SceneDelegate.swift */,
-				9191F13724B5021300479020 /* ViewController.swift */,
 				9191F13924B5021300479020 /* Main.storyboard */,
 				9191F13C24B5021600479020 /* Assets.xcassets */,
 				9191F13E24B5021600479020 /* LaunchScreen.storyboard */,
@@ -207,9 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9191F13824B5021300479020 /* ViewController.swift in Sources */,
 				9191F13424B5021300479020 /* AppDelegate.swift in Sources */,
 				9191F13624B5021300479020 /* SceneDelegate.swift in Sources */,
+				9191F14A24B5162100479020 /* NewsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
