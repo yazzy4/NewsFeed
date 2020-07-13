@@ -45,7 +45,7 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
                 self.collectionView?.reloadData()
                 
             } catch {
-                print(error.localizedDescription)
+                print(error)
             }
         }
         
