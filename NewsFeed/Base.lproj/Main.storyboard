@@ -15,28 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rac-52-EWG">
-                            <size key="itemSize" width="156" height="241"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="1" id="rac-52-EWG">
+                            <size key="itemSize" width="160" height="237"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="UaK-J8-gUd" customClass="ArticleCell" customModule="NewsFeed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="156" height="241"/>
+                                <rect key="frame" x="1" y="0.0" width="174" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nPW-B8-F2x">
-                                    <rect key="frame" x="0.0" y="0.0" width="156" height="241"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="174" height="277"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-EA-vU9">
-                                            <rect key="frame" x="0.0" y="0.0" width="156" height="241"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="fud-YM-o0O">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="277"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-EA-vU9">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="277"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPQ-tr-Qun">
-                                            <rect key="frame" x="0.0" y="151" width="156" height="90"/>
+                                            <rect key="frame" x="0.0" y="187" width="174" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some exciting headline that makes you want to click on this tile " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJc-Py-xfv">
-                                                    <rect key="frame" x="8" y="8" width="140" height="74"/>
+                                                    <rect key="frame" x="8" y="8" width="158" height="74"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -53,18 +56,23 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="J9H-EA-vU9" secondAttribute="trailing" id="E9q-65-GRs"/>
-                                        <constraint firstItem="J9H-EA-vU9" firstAttribute="top" secondItem="nPW-B8-F2x" secondAttribute="top" id="G4G-vb-m9y"/>
+                                        <constraint firstItem="J9H-EA-vU9" firstAttribute="leading" secondItem="nPW-B8-F2x" secondAttribute="leading" id="4n0-fj-8tM"/>
+                                        <constraint firstAttribute="bottom" secondItem="J9H-EA-vU9" secondAttribute="bottom" id="88Q-US-7vA"/>
+                                        <constraint firstAttribute="bottom" secondItem="fud-YM-o0O" secondAttribute="bottom" id="8d1-mJ-FUP"/>
+                                        <constraint firstAttribute="trailing" secondItem="J9H-EA-vU9" secondAttribute="trailing" id="HGa-DB-Ixt"/>
                                         <constraint firstItem="KPQ-tr-Qun" firstAttribute="leading" secondItem="nPW-B8-F2x" secondAttribute="leading" id="I2K-DD-83l"/>
                                         <constraint firstAttribute="bottom" secondItem="KPQ-tr-Qun" secondAttribute="bottom" id="LhH-Tq-1Fl"/>
-                                        <constraint firstAttribute="bottom" secondItem="J9H-EA-vU9" secondAttribute="bottom" id="ZNe-rk-udn"/>
+                                        <constraint firstItem="J9H-EA-vU9" firstAttribute="top" secondItem="nPW-B8-F2x" secondAttribute="top" id="QCi-EQ-Uta"/>
+                                        <constraint firstItem="fud-YM-o0O" firstAttribute="leading" secondItem="nPW-B8-F2x" secondAttribute="leading" id="Qhg-Kl-y77"/>
                                         <constraint firstAttribute="trailing" secondItem="KPQ-tr-Qun" secondAttribute="trailing" id="bgA-IS-IgX"/>
-                                        <constraint firstItem="J9H-EA-vU9" firstAttribute="leading" secondItem="nPW-B8-F2x" secondAttribute="leading" id="diQ-hF-Dpl"/>
+                                        <constraint firstAttribute="trailing" secondItem="fud-YM-o0O" secondAttribute="trailing" id="jGY-L4-fyB"/>
+                                        <constraint firstItem="fud-YM-o0O" firstAttribute="top" secondItem="nPW-B8-F2x" secondAttribute="top" id="tuG-vf-BTe"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="156" height="241"/>
+                                <color key="backgroundColor" red="1" green="0.97052143560000004" blue="0.76809403850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="customSize" width="174" height="277"/>
                                 <connections>
-                                    <outlet property="aricleImage" destination="J9H-EA-vU9" id="qiB-Pg-pGV"/>
+                                    <outlet property="articleImageView" destination="J9H-EA-vU9" id="at3-1y-P40"/>
                                     <outlet property="headlineLabel" destination="OJc-Py-xfv" id="tNj-T2-fAe"/>
                                 </connections>
                             </collectionViewCell>
@@ -94,6 +102,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="urN-8M-o5w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.97319579338175555" green="1" blue="0.96414359134399452" alpha="0.68466395547945202" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -105,4 +114,7 @@
             <point key="canvasLocation" x="6004" y="53.523238380809602"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="newsPlaceholder" width="460" height="300"/>
+    </resources>
 </document>

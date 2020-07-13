@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
-//private let reuseIdentifier = "Cell"
 
-class NewsVC: UICollectionViewController {
+
+class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var articles =
         [Article(headline: "This is news"),
@@ -34,6 +36,17 @@ class NewsVC: UICollectionViewController {
         cell.populate(with: article)
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let height: CGFloat = 240
+        
+        let width = (collectionView.frame.width / 2) - 2
+        
+        let size = CGSize(width: width, height: height)
+        
+        return size
     }
 
 }
