@@ -8,20 +8,44 @@
 
 import UIKit
 import Alamofire
-import Kingfisher
 
 
+
+//API Key:a029c56d97c247339e4625ac61ad4181
+//http://newsapi.org/v2/top-headlines
+//country=us
+//apiKey=a029c56d97c247339e4625ac61ad4181
 
 class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var articles =
-        [Article(headline: "This is news"),
-        Article(headline: "This is also news"),
-        Article(headline: "This is also some news")]
+    var articles = [Article]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello")
+
+        getArticles()
+    }
+    
+    func getArticles() {
+        
+        let parameters: Parameters = ["country" : "us", "apiKey" : "a029c56d97c247339e4625ac61ad4181" ]
+        
+        AF.request("http://newsapi.org/v2/top-headlines", parameters: parameters).responseData { (response) in
+        
+            guard let data = response.data else { return }
+            
+            do {
+                
+//                let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                print(json)
+                
+                let topHeadlinesResponse = try JSONDecoder().decode(TopHeadlinesResponse.self, from: data)
+                print(topHeadlinesResponse)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

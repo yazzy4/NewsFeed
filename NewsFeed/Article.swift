@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct Article {
+struct Article: Decodable {
     let headline: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case headline = "title"
+    }
 }
