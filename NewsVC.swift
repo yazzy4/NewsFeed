@@ -40,7 +40,10 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 //                print(json)
                 
                 let topHeadlinesResponse = try JSONDecoder().decode(TopHeadlinesResponse.self, from: data)
-                print(topHeadlinesResponse)
+                
+                self.articles = topHeadlinesResponse.articles
+                self.collectionView?.reloadData()
+                
             } catch {
                 print(error.localizedDescription)
             }
