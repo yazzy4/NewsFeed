@@ -17,6 +17,7 @@
 		9191F15024BD051700479020 /* TopHeadlinesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191F14F24BD051700479020 /* TopHeadlinesResponse.swift */; };
 		9191F15224BE1C1500479020 /* ArticleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191F15124BE1C1500479020 /* ArticleDetailVC.swift */; };
 		91DED6B524BE239E00E3CF39 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DED6B424BE239E00E3CF39 /* NewsVC.swift */; };
+		91DED6B724BE28E700E3CF39 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DED6B624BE28E700E3CF39 /* WebKit.framework */; };
 		DF937544EAA105B6F4891EFE /* Pods_NewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0ADDCD62DDD8BC0D1B255E /* Pods_NewsFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		9191F14F24BD051700479020 /* TopHeadlinesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesResponse.swift; sourceTree = "<group>"; };
 		9191F15124BE1C1500479020 /* ArticleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailVC.swift; sourceTree = "<group>"; };
 		91DED6B424BE239E00E3CF39 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsVC.swift; path = NewsFeed/NewsVC.swift; sourceTree = SOURCE_ROOT; };
+		91DED6B624BE28E700E3CF39 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DED6B724BE28E700E3CF39 /* WebKit.framework in Frameworks */,
 				DF937544EAA105B6F4891EFE /* Pods_NewsFeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +56,7 @@
 		3425DD26B64CD242D86AD9E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91DED6B624BE28E700E3CF39 /* WebKit.framework */,
 				4A0ADDCD62DDD8BC0D1B255E /* Pods_NewsFeed.framework */,
 			);
 			name = Frameworks;

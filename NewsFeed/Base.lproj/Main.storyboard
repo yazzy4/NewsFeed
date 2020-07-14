@@ -101,7 +101,7 @@
         <!--Article-->
         <scene sceneID="LT3-qA-xCb">
             <objects>
-                <viewController id="XSt-fQ-HZi" customClass="ArticleDetailVC" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Article" id="XSt-fQ-HZi" customClass="ArticleDetailVC" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUj-70-GlN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Article" id="ZnB-kN-8Za"/>
                     <connections>
-                        <outlet property="articleWebView" destination="cx5-QH-Lyk" id="zKr-6D-VDk"/>
+                        <outlet property="articleWebView" destination="cx5-QH-Lyk" id="zf5-Aw-C2L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgg-Y7-tho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

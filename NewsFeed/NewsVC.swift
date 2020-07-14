@@ -78,6 +78,12 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        
+        if let articleVC = segue.destination as? ArticleDetailVC, let article = sender as? Article {
+            
+            articleVC.article = article
+            
+        }
     }
 
 }
