@@ -3,14 +3,15 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News-->
+        <!--Article-->
         <scene sceneID="4PT-FW-1ob">
             <objects>
-                <collectionViewController id="suK-d9-nJz" customClass="NewsVC" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Article" id="suK-d9-nJz" customClass="NewsVC" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zdx-Pa-MFM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +84,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="News" largeTitleDisplayMode="always" id="lL7-HQ-28Y"/>
+                    <connections>
+                        <segue destination="XSt-fQ-HZi" kind="show" identifier="segue.main.newsToArticle" id="dyC-OT-fRd"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEm-YW-a2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <collectionViewFlowLayout automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gff-F6-KbJ">
@@ -93,6 +97,41 @@
                 </collectionViewFlowLayout>
             </objects>
             <point key="canvasLocation" x="6943.1999999999998" y="53.523238380809602"/>
+        </scene>
+        <!--Article-->
+        <scene sceneID="LT3-qA-xCb">
+            <objects>
+                <viewController id="XSt-fQ-HZi" customClass="ArticleDetailVC" customModule="NewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RUj-70-GlN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-QH-Lyk">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cx5-QH-Lyk" firstAttribute="top" secondItem="wEo-xR-lhW" secondAttribute="top" id="2Ax-3o-efo"/>
+                            <constraint firstItem="cx5-QH-Lyk" firstAttribute="leading" secondItem="wEo-xR-lhW" secondAttribute="leading" id="7EJ-fw-E4o"/>
+                            <constraint firstItem="wEo-xR-lhW" firstAttribute="bottom" secondItem="cx5-QH-Lyk" secondAttribute="bottom" id="agO-t2-dGH"/>
+                            <constraint firstItem="wEo-xR-lhW" firstAttribute="trailing" secondItem="cx5-QH-Lyk" secondAttribute="trailing" id="bSz-oS-lbT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wEo-xR-lhW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Article" id="ZnB-kN-8Za"/>
+                    <connections>
+                        <outlet property="articleWebView" destination="cx5-QH-Lyk" id="zKr-6D-VDk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgg-Y7-tho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7736.8000000000002" y="53.523238380809602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="llj-Na-oTV">
@@ -114,6 +153,7 @@
             <point key="canvasLocation" x="6004" y="53.523238380809602"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="newsPlaceholder" width="460" height="300"/>
     </resources>
