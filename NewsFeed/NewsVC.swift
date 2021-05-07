@@ -29,9 +29,7 @@ class NewsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
             
             do {
                 
-//                let json = try JSONSerialization.jsonObject(with: data, options: [])
-//                print(json)
-                
+
                 let topHeadlinesResponse = try JSONDecoder().decode(TopHeadlinesResponse.self, from: data)
                 
                 self.articles = topHeadlinesResponse.articles
